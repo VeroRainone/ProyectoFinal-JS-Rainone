@@ -1,0 +1,234 @@
+
+/* tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik:wght@400;600;800&family=Sedgwick+Ave+Display&display=swap');
+
+*reset{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ff-title: 'Dela Gothic One', sans-serif;
+    --ff-text: 'Rubik', sans-serif;
+    --color-ppal:  #245E53;
+    --color-blanco: white;
+    --color-negro: black; 
+}
+.btn {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 7px 40px;
+    box-shadow: 6px 7px 4px gray; }
+    .btn:hover {
+      background-color:var(--color-blanco);
+      color: var(--color-negro);
+      font-weight: bold;
+      transform: scale(1.03);
+      transition: .3s; }
+
+body{
+    font-family: var(--ff-text);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+    font-size: 1.1rem;
+}
+h1{
+    margin-top: 0;
+    padding: 25px;
+    text-align: center;}
+    @media (min-width: 1024px){
+        h1{
+            font-size: 2rem;}}
+
+h1,h2,h3{
+    font-family: var(--ff-title);
+}
+
+/* HEADER */
+.main-header{
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0, 2rem;
+    background-color: var(--color-ppal);
+}
+.logo{
+    width: 9rem;
+    padding-left: 15px;}
+    @media (min-width: 768px) {
+        .logo{
+            width: 10rem;
+         }}
+    @media (min-width: 1024px) {
+        .logo{
+            width: 11rem;
+        }}
+    @media (min-width: 1044px) {
+        .logo{
+            width: 14rem;
+        }} 
+
+.nav-list{
+    display: flex;
+    gap: 1rem;
+    color: var(--color-negro);
+    margin-right: 45px;
+    flex-wrap: wrap;
+}
+.nav-link:hover{
+    font-weight: bold;
+}
+.nav-link{
+    position: relative;
+}
+.nav-link::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 2px;
+    transform:scaleX(0) ;
+    transition: 0.3s;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+.main-height{
+    min-height: 90vh;
+}
+/* BANNER PPAL */
+.banner-ppal{
+    background-image: url("../imagenes/equipo-medico.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+/* QUIENES SOMOS */
+.quienes-somos{
+    max-width: 1400px;
+    margin: 0, auto;
+    padding: 1rem;
+}
+.quienes-somos h2{
+    padding: 15px;
+    display: inline;   
+}
+.texto-img-qs{
+   max-width: 1200px;
+}
+@media (min-width: 1024px) {
+    .texto-img-qs{
+        display: flex;
+    }}
+
+.quienes-somos p{
+    line-height: 1.4rem;
+    margin-top: 0;
+    padding: 25px;
+}
+.quienes-somos img{
+    width: 98%;}
+    @media (min-width: 1024px) {
+        .quienes-somos img{
+            height: 350px;
+    }}
+
+/* Portal de turnos */
+.opciones{
+    font-size: 24px;
+    color: var(--color-ppal);
+    font-weight: bold;
+}
+.opciones li a{
+    font-size: 20px;
+}
+
+/* Agendar turnos */
+.container-turnos {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color:var(--color-ppal) ;
+}
+    
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select, input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .paciente-id{
+    display: none;
+}
+
+.enviar{
+    margin-left: 120px;
+}
+/* Ver mis turnos */
+.ver-turno-form{
+    text-align: center; 
+}
+.ver-turno-form input{
+    width: 260px;      
+}
+
+/* FOOTER */
+.footer{
+    min-height: 10vh;
+    background-color: var(--color-negro);
+    color: whitesmoke;
+}
+.container{
+    max-width: 800px;
+    margin: 0, auto;
+    padding: 2rem;
+}
+.social{
+    display: flex;
+    gap: 1rem;
+}
+.social i{
+    font-family: 2rem;
+}
+.wap{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 25px;
+    background-color: var(--color-ppal);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;}
+    @media (min-width: 768px) {
+        .wap{
+        width: 260px;
+        height: 50px;
+    }}
+.img-wap{
+    width: 40px;
+    height: 40px;
+}
+
